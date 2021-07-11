@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicVisibility", "DynamicVisibility\DynamicVisibility.csproj", "{52BF544F-528F-42E6-A0A0-05B35F7CC343}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52BF544F-528F-42E6-A0A0-05B35F7CC343}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52BF544F-528F-42E6-A0A0-05B35F7CC343}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52BF544F-528F-42E6-A0A0-05B35F7CC343}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52BF544F-528F-42E6-A0A0-05B35F7CC343}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B601B07E-9977-4047-B70F-E7349BBADC62}
+	EndGlobalSection
+EndGlobal
