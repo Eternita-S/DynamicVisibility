@@ -145,8 +145,8 @@ namespace DynamicVisibility
                 }
                 ImGui.EndChild();
                 ImGui.End();
-                ImGui.PopStyleVar();
             }
+            ImGui.PopStyleVar();
             JumpToCurrent = false;
             if (!CfgOpen)
             {
