@@ -75,7 +75,7 @@ namespace DynamicVisibility
                         {
                             SetVisibilityEnabled(false);
                             VisWasDisabledInCS = true;
-                            Svc.PluginInterface.UiBuilder.AddNotification("Visibility plugin temporarily disabled because cutscene has begun", "Dynamic Visibiliy", NotificationType.Error);
+                            Svc.PluginInterface.UiBuilder.AddNotification("Visibility plugin temporarily disabled\nbecause cutscene has begun", "Dynamic Visibiliy", NotificationType.Info);
                         }
                     }
                     else
@@ -85,7 +85,7 @@ namespace DynamicVisibility
                         {
                             SetVisibilityEnabled(true);
                             VisWasDisabledInCS = false;
-                            Svc.PluginInterface.UiBuilder.AddNotification("Visibility plugin reenabled", "Dynamic Visibiliy", NotificationType.Success);
+                            Svc.PluginInterface.UiBuilder.AddNotification("Visibility plugin reenabled", "Dynamic Visibiliy", NotificationType.Info);
                         }
                     }
                 }
@@ -221,7 +221,7 @@ namespace DynamicVisibility
                     Svc.Chat.Print("Could not find visibility plugin");
                     return false;
                 }
-                var vcfg = vis.GetType().GetField("PluginConfiguration");
+                var vcfg = vis.GetType().GetField("Configuration");
                 var enabled = vcfg.GetValue(vis).GetType().GetProperty("Enabled");
                 return (bool)enabled.GetValue(vcfg.GetValue(vis));
                 //Svc.Chat.Print("Set visibility state to: " + enabled);
