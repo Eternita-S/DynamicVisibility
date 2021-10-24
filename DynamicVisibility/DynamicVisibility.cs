@@ -238,9 +238,8 @@ namespace DynamicVisibility
         {
             try
             {
-                var assembly = Svc.PluginInterface.GetType().Assembly;
-                var pluginManager = assembly.
-                    GetType("Dalamud.Service`1", true).MakeGenericType(assembly.GetType("Dalamud.Plugin.Internal.PluginManager", true)).
+                var pluginManager = Svc.PluginInterface.GetType().Assembly.
+                    GetType("Dalamud.Service`1", true).MakeGenericType(Svc.PluginInterface.GetType().Assembly.GetType("Dalamud.Plugin.Internal.PluginManager", true)).
                     GetMethod("Get").Invoke(null, BindingFlags.Default, null, new object[] { }, null);
                 var installedPlugins = (System.Collections.IList)pluginManager.GetType().GetProperty("InstalledPlugins").GetValue(pluginManager);
 
